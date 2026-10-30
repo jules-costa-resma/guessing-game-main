@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8"> <!--this is kinda like ascii-->
+    <meta name="viewport" content="width-device-width, initial scale=1.0"> <!--this helps mobile-->
+    <!--SEO-->
+    <meta name="description" content="Guessing game">
+    <meta name="keywords" content="game">
+    <link rel="stylesheet" href="guessing.css">
+    <script src="guessing.js" defer></script>
+    <title>Jules Demo Site</title>
+</head>
+
+<!--top part-->
+<body>
+     <ul>
+            <li><a href="?">Home</a></li>
+            <li><a href="?">Dice Poker</a></li>
+            <li><a href="?">Guessing Game</a></li>
+            <li><a href="?">Todo list</a></li>
+            <li><a href="?">Contact me</a></li>
+        </ul>
+<!--game play area-->
+    <div class="first">
+    <h1>Welcome to the Guessing Game!</h1>
+    <p>I'm thinking of a number between 1 and
+    <span id="maxNumber">20</span>...can you guess it?</p>
+    <div id="error" class="hidden"></div>
+    <input type="number" id="guess">
+    <span id="evaluateGuess"></span>
+    <p>
+    <button id="guessButton">Guess</button>
+    <button id="tryAgain" class="hidden">Play Again</button>
+    </p>
+    </div>
+    <!--scoreboard-->
+    <div class="grid">
+    <div class="scoreboard">
+    <h2>Scoreboard</h2>
+    <div class="stats">
+        <h3>Wins</h3>
+        <h3>Losses</h3>
+        <h3>Guesses</h3>
+        <div class="statBox" id="wins">5</div>
+        <div class="statBox" id="losses">3</div> 
+        <div class="statBox" id="guessesLeft">2</div>
+         
+    </div>
+    <button id="reset">Reset Scoreboard</button>
+    </div>
+    <!--settings-->
+    <div class="settings">
+    <h2>Settings</h2>
+    <label for="attempts"># Guesses</label>
+    <input type="number" id="attempts" value="5">
+    <label for="maxNumberSetting">Max Number</label>
+    <input type="number" id="maxNumberSetting" value="20">
+    <button id="updateSettings">Update</button>
+    </div>
+    </div>
+</body>
